@@ -1,0 +1,23 @@
+# Large raw data files — do NOT upload to GitHub
+listings.csv
+reviews.csv
+
+# Intermediate outputs not needed for the app
+outputs/merged_reviews.csv
+outputs/doc_topics.csv
+outputs/map_A_scatter.html
+outputs/map_B_hexagon.html
+outputs/map_C_combined.html
+outputs/map_D_fused.html
+outputs/map_E_final.html
+outputs/map_F_heatmap.html
+outputs/map_G_final.html
+outputs/map_H3.html
+outputs/map_H_heatmap_v2.html
+outputs/map_ART.html
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
