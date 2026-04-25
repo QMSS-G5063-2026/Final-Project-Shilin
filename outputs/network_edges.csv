@@ -1,0 +1,514 @@
+source,target,weight
+Allerton,Cambria Heights,0.9999
+Allerton,Parkchester,0.9999
+Allerton,Fort Hamilton,0.9999
+Arden Heights,Howland Hook,1.0
+Arden Heights,Fieldston,1.0
+Arden Heights,Todt Hill,1.0
+Arrochar,Grymes Hill,0.9998
+Arrochar,Woodlawn,0.9998
+Arrochar,Windsor Terrace,0.9998
+Arverne,St. Albans,1.0
+Arverne,West Village,0.9999
+Arverne,Canarsie,0.9999
+Astoria,Chinatown,0.9999
+Astoria,Brownsville,0.9999
+Astoria,Ditmars Steinway,0.9998
+Bath Beach,Fort Hamilton,0.9999
+Bath Beach,Forest Hills,0.9999
+Bath Beach,Brooklyn Heights,0.9998
+Battery Park City,Little Neck,0.995
+Battery Park City,Coney Island,0.9941
+Battery Park City,South Ozone Park,0.9936
+Bay Ridge,Flatiron District,0.9998
+Bay Ridge,Allerton,0.9998
+Bay Ridge,St. Albans,0.9998
+Bay Terrace,Howland Hook,1.0
+Bay Terrace,Fieldston,1.0
+Bay Terrace,Todt Hill,1.0
+"Bay Terrace, Staten Island",Howland Hook,1.0
+"Bay Terrace, Staten Island",Fieldston,1.0
+"Bay Terrace, Staten Island",Todt Hill,1.0
+Baychester,Gowanus,0.9999
+Baychester,East Village,0.9998
+Baychester,Bull's Head,0.9998
+Bayside,Whitestone,1.0
+Bayside,Dongan Hills,0.9999
+Bayside,North Riverdale,0.9999
+Bayswater,Kips Bay,0.9998
+Bayswater,Chinatown,0.9997
+Bayswater,Brownsville,0.9997
+Bedford-Stuyvesant,Flatbush,0.9999
+Bedford-Stuyvesant,Crown Heights,0.9999
+Bedford-Stuyvesant,East Flatbush,0.9999
+Belle Harbor,City Island,1.0
+Belle Harbor,Rockaway Beach,0.9999
+Belle Harbor,Greenwich Village,0.9999
+Bellerose,Fresh Meadows,0.9999
+Bellerose,Wakefield,0.9999
+Bellerose,Parkchester,0.9999
+Belmont,Midland Beach,0.9987
+Belmont,Borough Park,0.9984
+Belmont,Sunnyside,0.998
+Bensonhurst,Cypress Hills,0.9997
+Bensonhurst,Corona,0.9997
+Bensonhurst,Kips Bay,0.9996
+Bergen Beach,Howland Hook,1.0
+Bergen Beach,Fieldston,1.0
+Bergen Beach,Todt Hill,1.0
+Boerum Hill,Cobble Hill,0.9999
+Boerum Hill,Carroll Gardens,0.9999
+Boerum Hill,Clinton Hill,0.9999
+Borough Park,Financial District,0.9998
+Borough Park,Little Italy,0.9997
+Borough Park,Tribeca,0.9996
+Breezy Point,Howland Hook,1.0
+Breezy Point,Fieldston,1.0
+Breezy Point,Todt Hill,1.0
+Briarwood,Clason Point,0.9992
+Briarwood,College Point,0.9992
+Briarwood,Norwood,0.9991
+Brighton Beach,Sheepshead Bay,0.9998
+Brighton Beach,Queens Village,0.9996
+Brighton Beach,Pelham Gardens,0.9996
+Bronxdale,Mount Eden,0.9986
+Bronxdale,Boerum Hill,0.9985
+Bronxdale,East Flatbush,0.9985
+Brooklyn Heights,Flatlands,0.9999
+Brooklyn Heights,Forest Hills,0.9999
+Brownsville,Chinatown,0.9999
+Brownsville,Kips Bay,0.9999
+Bull's Head,Stuyvesant Town,0.9999
+Bull's Head,Schuylerville,0.9996
+Bushwick,East Flatbush,0.9999
+Bushwick,East Village,0.9999
+Bushwick,Gowanus,0.9999
+Cambria Heights,Eltingville,0.9998
+Cambria Heights,New Dorp Beach,0.9998
+Canarsie,South Slope,1.0
+Canarsie,Prospect Heights,0.9999
+Canarsie,West Village,0.9999
+Carroll Gardens,Williamsburg,0.9999
+Carroll Gardens,Park Slope,0.9999
+Carroll Gardens,Gowanus,0.9999
+Castle Hill,Flatlands,0.9999
+Castle Hill,Downtown Brooklyn,0.9998
+Castle Hill,Canarsie,0.9998
+Castleton Corners,Concord,0.998
+Castleton Corners,Soundview,0.9978
+Castleton Corners,Great Kills,0.9974
+Chelsea,Ditmars Steinway,1.0
+Chelsea,Hell's Kitchen,0.9999
+Chelsea,Woodside,0.9999
+Chinatown,Kips Bay,0.9999
+City Island,Navy Yard,0.9999
+City Island,Spuyten Duyvil,0.9999
+Civic Center,South Ozone Park,0.997
+Civic Center,Far Rockaway,0.9969
+Civic Center,Edgemere,0.9968
+Claremont Village,Morris Heights,0.9992
+Claremont Village,Stapleton,0.9991
+Claremont Village,Mott Haven,0.9987
+Clason Point,College Point,0.9998
+Clason Point,Mill Basin,0.9997
+Clason Point,Hell's Kitchen,0.9996
+Clifton,Randall Manor,0.9965
+Clifton,Westerleigh,0.9958
+Clifton,Silver Lake,0.9958
+Clinton Hill,Middle Village,0.9999
+Clinton Hill,Bushwick,0.9999
+Co-op City,Howland Hook,1.0
+Co-op City,Bergen Beach,1.0
+Co-op City,Graniteville,1.0
+Cobble Hill,Windsor Terrace,0.9999
+Cobble Hill,Park Slope,0.9999
+College Point,Mill Basin,0.9994
+Columbia St,Schuylerville,0.9998
+Columbia St,Middle Village,0.9996
+Columbia St,Park Slope,0.9996
+Concord,Soundview,1.0
+Concord,Claremont Village,0.9985
+Concourse,Harlem,0.9999
+Concourse,Maspeth,0.9997
+Concourse,Long Island City,0.9993
+Concourse Village,East Harlem,0.9993
+Concourse Village,Concourse,0.9992
+Concourse Village,Harlem,0.9988
+Coney Island,South Ozone Park,0.9989
+Coney Island,Rego Park,0.9989
+Coney Island,Morrisania,0.9988
+Corona,Ditmars Steinway,0.9999
+Corona,Cypress Hills,0.9998
+Corona,Kips Bay,0.9998
+Country Club,Dyker Heights,0.9822
+Country Club,Westchester Square,0.9806
+Country Club,Fordham,0.9805
+Crown Heights,Prospect-Lefferts Gardens,0.9999
+Crown Heights,East Flatbush,0.9999
+Cypress Hills,Washington Heights,0.9999
+Cypress Hills,Hell's Kitchen,0.9998
+DUMBO,Ridgewood,0.9998
+DUMBO,Gowanus,0.9998
+DUMBO,SoHo,0.9998
+Ditmars Steinway,Kips Bay,0.9999
+Ditmars Steinway,Hell's Kitchen,0.9999
+Dongan Hills,Howland Hook,1.0
+Dongan Hills,Bergen Beach,1.0
+Dongan Hills,Graniteville,1.0
+Douglaston,Midland Beach,0.9983
+Douglaston,Briarwood,0.9982
+Douglaston,Borough Park,0.9979
+Downtown Brooklyn,Fort Greene,0.9998
+Downtown Brooklyn,Canarsie,0.9998
+Dyker Heights,Briarwood,0.9976
+Dyker Heights,Fordham,0.9969
+Dyker Heights,Theater District,0.9965
+East Elmhurst,Ozone Park,1.0
+East Elmhurst,Morningside Heights,0.9998
+East Elmhurst,Glendale,0.9998
+East Flatbush,Sunset Park,0.9999
+East Flatbush,Port Morris,0.9999
+East Harlem,Longwood,0.9989
+East Harlem,Concourse,0.9987
+East Morrisania,Howland Hook,1.0
+East Morrisania,Bergen Beach,1.0
+East Morrisania,Graniteville,1.0
+East New York,Sunset Park,0.9999
+East New York,Financial District,0.9999
+East New York,Upper West Side,0.9999
+East Village,Little Italy,0.9999
+East Village,Gowanus,0.9999
+Eastchester,Howland Hook,1.0
+Eastchester,Bergen Beach,1.0
+Eastchester,Graniteville,1.0
+Edenwald,Upper East Side,0.9998
+Edenwald,Upper West Side,0.9998
+Edenwald,Fort Greene,0.9998
+Edgemere,Kensington,0.9995
+Edgemere,Clinton Hill,0.9995
+Edgemere,Bushwick,0.9994
+Elmhurst,Theater District,0.9997
+Elmhurst,Midtown,0.9995
+Elmhurst,Fordham,0.9991
+Eltingville,New Dorp Beach,1.0
+Eltingville,Throgs Neck,0.9998
+Emerson Hill,Sea Gate,0.9819
+Emerson Hill,Gravesend,0.9803
+Emerson Hill,Shore Acres,0.9788
+Far Rockaway,Richmond Hill,0.9997
+Far Rockaway,Rosedale,0.9996
+Far Rockaway,Kew Gardens,0.9996
+Fieldston,Howland Hook,1.0
+Fieldston,Graniteville,1.0
+Financial District,Glendale,0.9998
+Financial District,Sunset Park,0.9998
+Flatbush,East Village,0.9999
+Flatbush,Sunset Park,0.9999
+Flatiron District,St. Albans,0.9999
+Flatiron District,Pelham Gardens,0.9999
+Flatiron District,Rosedale,0.9999
+Flatlands,Forest Hills,0.9999
+Flatlands,Canarsie,0.9999
+Flushing,Nolita,0.9999
+Flushing,Glendale,0.9999
+Flushing,Tribeca,0.9999
+Fordham,Theater District,0.9993
+Fordham,College Point,0.9988
+Forest Hills,Fort Greene,0.9999
+Forest Hills,Canarsie,0.9999
+Fort Greene,Kensington,0.9999
+Fort Greene,Flatlands,0.9999
+Fort Hamilton,Murray Hill,0.9999
+Fort Hamilton,Nolita,0.9999
+Fort Hamilton,SoHo,0.9999
+Fresh Meadows,Williamsbridge,0.9999
+Fresh Meadows,Wakefield,0.9998
+Gerritsen Beach,Howland Hook,1.0
+Gerritsen Beach,Bergen Beach,1.0
+Gerritsen Beach,Graniteville,1.0
+Glendale,Murray Hill,0.9999
+Glendale,SoHo,0.9999
+Glendale,Tribeca,0.9999
+Gowanus,Williamsburg,0.9999
+Gramercy,Morris Heights,0.9996
+Gramercy,Chinatown,0.9995
+Gramercy,Prospect-Lefferts Gardens,0.9995
+Graniteville,Howland Hook,1.0
+Graniteville,Bergen Beach,1.0
+Graniteville,North Riverdale,1.0
+Grant City,Howland Hook,1.0
+Grant City,Bergen Beach,1.0
+Grant City,North Riverdale,1.0
+Gravesend,Sea Gate,0.9995
+Gravesend,Shore Acres,0.9981
+Gravesend,West Brighton,0.9978
+Great Kills,Woodlawn,0.9998
+Great Kills,Grymes Hill,0.9998
+Great Kills,Arrochar,0.9993
+Greenpoint,South Slope,1.0
+Greenpoint,Park Slope,0.9999
+Greenpoint,Williamsburg,0.9999
+Greenwich Village,Rockaway Beach,1.0
+Greenwich Village,Laurelton,0.9999
+Greenwich Village,West Village,0.9999
+Grymes Hill,Woodlawn,1.0
+Harlem,Maspeth,0.9997
+Harlem,Long Island City,0.9993
+Hell's Kitchen,Washington Heights,0.9999
+Hell's Kitchen,Woodside,0.9999
+Highbridge,Melrose,0.9969
+Highbridge,Mott Haven,0.9969
+Highbridge,Concourse,0.9966
+Hollis,Jamaica,0.9999
+Hollis,Springfield Gardens,0.9999
+Hollis,Queens Village,0.9999
+Holliswood,Howland Hook,1.0
+Holliswood,Bergen Beach,1.0
+Holliswood,North Riverdale,1.0
+Howard Beach,Rosedale,0.9999
+Howard Beach,Vinegar Hill,0.9999
+Howard Beach,Laurelton,0.9998
+Howland Hook,Woodrow,1.0
+Huguenot,Fieldston,1.0
+Huguenot,Woodrow,1.0
+Huguenot,Bergen Beach,1.0
+Hunts Point,Gramercy,0.9991
+Hunts Point,Morris Heights,0.999
+Hunts Point,Stapleton,0.9988
+Inwood,South Ozone Park,0.9997
+Inwood,Rego Park,0.9997
+Inwood,Edenwald,0.9997
+Jackson Heights,Woodside,0.9998
+Jackson Heights,Kips Bay,0.9998
+Jackson Heights,Mill Basin,0.9998
+Jamaica,Rosedale,0.9999
+Jamaica,Queens Village,0.9999
+Jamaica Estates,Vinegar Hill,0.9998
+Jamaica Estates,Howard Beach,0.9997
+Jamaica Estates,Laurelton,0.9996
+Jamaica Hills,Tottenville,0.9999
+Jamaica Hills,Pelham Bay,0.9999
+Jamaica Hills,Kew Gardens,0.9998
+Kensington,Bushwick,0.9999
+Kensington,Middle Village,0.9999
+Kew Gardens,Unionport,0.9997
+Kew Gardens,Tottenville,0.9996
+Kew Gardens Hills,SoHo,0.9998
+Kew Gardens Hills,Little Italy,0.9998
+Kew Gardens Hills,East Village,0.9998
+Kingsbridge,Woodhaven,0.9997
+Kingsbridge,Hell's Kitchen,0.9994
+Kingsbridge,Woodside,0.9994
+Kips Bay,Chelsea,0.9999
+Laurelton,Rockaway Beach,1.0
+Laurelton,Pelham Gardens,0.9999
+Lighthouse Hill,Howland Hook,1.0
+Lighthouse Hill,Bergen Beach,1.0
+Lighthouse Hill,North Riverdale,1.0
+Little Italy,SoHo,0.9999
+Little Italy,Murray Hill,0.9998
+Little Neck,Riverdale,0.9992
+Little Neck,Inwood,0.9989
+Little Neck,Woodhaven,0.9989
+Long Island City,Maspeth,0.9998
+Long Island City,Astoria,0.9993
+Longwood,Harlem,0.9988
+Longwood,Concourse,0.9984
+Lower East Side,Sunset Park,0.9998
+Lower East Side,East New York,0.9998
+Lower East Side,Flatbush,0.9998
+Manhattan Beach,Greenpoint,0.9994
+Manhattan Beach,Schuylerville,0.9993
+Manhattan Beach,Greenwich Village,0.9993
+Marble Hill,Throgs Neck,0.9998
+Marble Hill,Bull's Head,0.9996
+Marble Hill,Cambria Heights,0.9996
+Mariners Harbor,Forest Hills,0.9999
+Mariners Harbor,Flatlands,0.9998
+Mariners Harbor,Fort Greene,0.9998
+Melrose,Midtown,0.9993
+Melrose,Long Island City,0.9991
+Melrose,Cypress Hills,0.999
+Middle Village,Williamsburg,1.0
+Middle Village,Park Slope,0.9999
+Midland Beach,Stuyvesant Town,0.9986
+Midland Beach,Bull's Head,0.9984
+Midtown,Theater District,0.9998
+Midtown,Cypress Hills,0.9997
+Midtown,Washington Heights,0.9997
+Midwood,Tompkinsville,0.9995
+Midwood,East New York,0.9995
+Midwood,Sunset Park,0.9995
+Mill Basin,Morningside Heights,0.9997
+Morningside Heights,Morris Park,0.9999
+Morningside Heights,Wakefield,0.9998
+Morris Heights,Stapleton,0.9997
+Morris Heights,Prospect-Lefferts Gardens,0.9993
+Morris Park,Parkchester,0.9999
+Morris Park,Van Nest,0.9999
+Morris Park,Upper West Side,0.9999
+Morrisania,Inwood,0.9989
+Morrisania,South Ozone Park,0.9988
+Morrisania,Rego Park,0.9988
+Mott Haven,Concourse,0.9989
+Mott Haven,Harlem,0.9986
+Mount Eden,Bay Ridge,0.9996
+Mount Eden,DUMBO,0.9996
+Mount Eden,Downtown Brooklyn,0.9993
+Mount Hope,Woodhaven,0.9987
+Mount Hope,Kingsbridge,0.998
+Mount Hope,Elmhurst,0.9979
+Murray Hill,SoHo,1.0
+Murray Hill,Nolita,1.0
+Murray Hill,Upper East Side,0.9999
+Navy Yard,Howland Hook,1.0
+Navy Yard,Bergen Beach,1.0
+Navy Yard,Graniteville,1.0
+Neponsit,Howland Hook,1.0
+Neponsit,Bergen Beach,1.0
+Neponsit,Graniteville,1.0
+New Brighton,St. George,0.9991
+New Brighton,Two Bridges,0.9972
+New Brighton,Stapleton,0.9963
+New Dorp Beach,Throgs Neck,0.9998
+New Springville,Howland Hook,1.0
+New Springville,Bergen Beach,1.0
+New Springville,Graniteville,1.0
+NoHo,Windsor Terrace,0.9997
+NoHo,Carroll Gardens,0.9995
+NoHo,Prospect Heights,0.9995
+Nolita,Upper East Side,1.0
+North Riverdale,Howland Hook,1.0
+North Riverdale,Bergen Beach,1.0
+Norwood,Williamsbridge,0.9993
+Norwood,Westchester Square,0.9992
+Norwood,Fresh Meadows,0.9992
+Olinville,Howland Hook,1.0
+Olinville,Bergen Beach,1.0
+Olinville,Graniteville,1.0
+Ozone Park,Glendale,0.9998
+Ozone Park,Morris Park,0.9998
+Park Slope,Williamsburg,1.0
+Pelham Bay,Tottenville,1.0
+Pelham Bay,Vinegar Hill,0.9999
+Pelham Gardens,Arverne,0.9999
+Pelham Gardens,St. Albans,0.9999
+Port Morris,Bushwick,0.9998
+Port Morris,Prospect-Lefferts Gardens,0.9998
+Port Richmond,Howland Hook,1.0
+Port Richmond,Bergen Beach,1.0
+Port Richmond,Graniteville,1.0
+Prince's Bay,Red Hook,0.9993
+Prince's Bay,Columbia St,0.9993
+Prince's Bay,Bedford-Stuyvesant,0.9987
+Prospect Heights,South Slope,0.9999
+Prospect Heights,West Village,0.9999
+Prospect-Lefferts Gardens,East Flatbush,0.9999
+Prospect-Lefferts Gardens,Bedford-Stuyvesant,0.9998
+Queens Village,Rosedale,1.0
+Randall Manor,Two Bridges,0.9969
+Randall Manor,Silver Lake,0.9967
+Red Hook,Bedford-Stuyvesant,0.9993
+Red Hook,Clinton Hill,0.9992
+Rego Park,Ozone Park,0.9998
+Rego Park,Van Nest,0.9998
+Richmond Hill,Rosedale,0.9999
+Richmond Hill,Jamaica,0.9998
+Richmond Hill,Upper East Side,0.9998
+Ridgewood,SoHo,0.9999
+Ridgewood,Murray Hill,0.9999
+Ridgewood,Nolita,0.9999
+Riverdale,Clason Point,0.999
+Riverdale,Wakefield,0.999
+Rockaway Beach,City Island,0.9999
+Roosevelt Island,Gramercy,0.9992
+Roosevelt Island,Crown Heights,0.999
+Roosevelt Island,Prospect-Lefferts Gardens,0.9988
+Rosebank,Flatlands,0.9993
+Rosebank,Allerton,0.9992
+Rosebank,Brooklyn Heights,0.9992
+Rossville,Howland Hook,1.0
+Rossville,Bergen Beach,1.0
+Rossville,Graniteville,1.0
+Schuylerville,Greenpoint,0.9998
+Schuylerville,Park Slope,0.9997
+Sea Gate,Shore Acres,0.999
+Sea Gate,West Brighton,0.9982
+Sheepshead Bay,Flatiron District,0.9997
+Sheepshead Bay,Canarsie,0.9997
+Shore Acres,West Brighton,0.9995
+Shore Acres,Mariners Harbor,0.9988
+Silver Lake,Prince's Bay,0.9973
+Silver Lake,Two Bridges,0.9966
+SoHo,Tribeca,0.9999
+Soundview,Claremont Village,0.9985
+South Beach,Jamaica Hills,0.9989
+South Beach,Tottenville,0.9988
+South Beach,Pelham Bay,0.9987
+South Ozone Park,Rego Park,0.9994
+South Ozone Park,Far Rockaway,0.9993
+Springfield Gardens,Wakefield,0.9999
+Springfield Gardens,Jamaica,0.9999
+Spuyten Duyvil,Howland Hook,1.0
+Spuyten Duyvil,Bergen Beach,1.0
+Spuyten Duyvil,Graniteville,1.0
+St. Albans,Canarsie,0.9999
+St. George,Two Bridges,0.9966
+St. George,Stapleton,0.9959
+Stapleton,Gramercy,0.9992
+Stuyvesant Town,Baychester,0.9998
+Stuyvesant Town,Gowanus,0.9995
+Sunnyside,Woodside,0.9998
+Sunnyside,Chelsea,0.9997
+Sunnyside,Brownsville,0.9996
+Theater District,Washington Heights,0.9994
+Throgs Neck,Laurelton,0.9998
+Todt Hill,Howland Hook,1.0
+Todt Hill,Fieldston,1.0
+Todt Hill,Grant City,1.0
+Tompkinsville,Bedford-Stuyvesant,0.9998
+Tompkinsville,Flatbush,0.9998
+Tompkinsville,Port Morris,0.9997
+Tottenville,Vinegar Hill,0.9999
+Tremont,Highbridge,0.9931
+Tremont,Mott Haven,0.9918
+Tremont,East Harlem,0.9917
+Two Bridges,Morris Heights,0.9984
+Two Bridges,Gramercy,0.9983
+Two Bridges,Maspeth,0.9981
+Unionport,Jamaica Hills,0.9997
+Unionport,Tottenville,0.9995
+University Heights,Unionport,0.9994
+University Heights,Kensington,0.999
+University Heights,Inwood,0.999
+Upper East Side,Flushing,0.9999
+Upper West Side,Glendale,0.9999
+Upper West Side,SoHo,0.9999
+Van Nest,Bath Beach,0.9998
+Van Nest,Upper East Side,0.9998
+Wakefield,Williamsbridge,0.9998
+Washington Heights,Chelsea,0.9999
+West Brighton,Mariners Harbor,0.9996
+West Brighton,Fort Hamilton,0.9995
+West Farms,Howland Hook,1.0
+West Farms,Fieldston,1.0
+West Farms,Todt Hill,1.0
+West Village,South Slope,0.9999
+Westchester Square,Briarwood,0.999
+Westchester Square,College Point,0.9986
+Westerleigh,Midland Beach,0.998
+Westerleigh,Belmont,0.9969
+Westerleigh,Stuyvesant Town,0.9968
+Whitestone,Dongan Hills,0.9999
+Whitestone,Todt Hill,0.9999
+Williamsbridge,Bellerose,0.9998
+Willowbrook,Howland Hook,1.0
+Willowbrook,Fieldston,1.0
+Willowbrook,Todt Hill,1.0
+Windsor Terrace,Boerum Hill,0.9998
+Windsor Terrace,Carroll Gardens,0.9998
+Woodhaven,Sunnyside,0.9995
+Woodhaven,Woodside,0.9995
+Woodrow,Bergen Beach,1.0
+Woodrow,North Riverdale,1.0
+Woodside,Ditmars Steinway,0.9999

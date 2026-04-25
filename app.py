@@ -160,6 +160,12 @@ def load_listings():
     return pd.read_csv(os.path.join(OUTPUT_DIR, 'listing_locations.csv'))
 
 @st.cache_data
+def load_network():
+    nodes = pd.read_csv(os.path.join(OUTPUT_DIR, 'network_nodes.csv'))
+    edges = pd.read_csv(os.path.join(OUTPUT_DIR, 'network_edges.csv'))
+    return nodes, edges
+
+@st.cache_data
 def load_topics():
     with open(os.path.join(OUTPUT_DIR, 'topic_keywords.json')) as f:
         return json.load(f)
@@ -428,9 +434,10 @@ with tab3:
     Zoom, pan, and hover to discover spatial patterns.
     </p>""", unsafe_allow_html=True)
 
-    map_tab1, map_tab2 = st.tabs([
+    map_tab1, map_tab2, map_tab3 = st.tabs([
         "🔵  Review Density",
         "🎨  Dominant Topic per Neighborhood",
+        "🕸️  Neighborhood Similarity Network",
     ])
 
     MAP_LAYOUT = dict(
@@ -503,6 +510,102 @@ with tab3:
         )
         fig_topics.update_layout(**MAP_LAYOUT)
         st.plotly_chart(fig_topics, use_container_width=True)
+
+    with map_tab3:
+        st.markdown('<p class="map-label">Neighborhood Similarity Network</p>', unsafe_allow_html=True)
+        st.markdown("""<p class="map-desc">
+        Each node is a neighborhood, positioned by its topic profile similarity (PCA).
+        Edges connect neighborhoods whose visitor-language patterns are most alike.
+        Node <strong>size</strong> = review volume; <strong>color</strong> = dominant topic community.
+        <strong>White-bordered nodes</strong> are the most-reviewed or most-connected neighborhoods.
+        Hover to explore.
+        </p>""", unsafe_allow_html=True)
+
+        try:
+            net_nodes, net_edges = load_network()
+            pos_map = dict(zip(net_nodes['neighborhood'], zip(net_nodes['x'], net_nodes['y'])))
+
+            fig_net = go.Figure()
+
+            # ── Edges ────────────────────────────────────────────────────────
+            # Precompute community membership for each node
+            node_comm = dict(zip(net_nodes['neighborhood'], net_nodes['community']))
+            for _, row in net_edges.iterrows():
+                x0, y0 = pos_map.get(row['source'], (0, 0))
+                x1, y1 = pos_map.get(row['target'], (0, 0))
+                same = node_comm.get(row['source'], -1) == node_comm.get(row['target'], -2)
+                alpha = 0.18 if same else 0.05
+                width = 1.0 if same else 0.5
+                fig_net.add_trace(go.Scatter(
+                    x=[x0, x1, None], y=[y0, y1, None],
+                    mode='lines',
+                    line=dict(width=width, color=f'rgba(160,160,255,{alpha})'),
+                    hoverinfo='none', showlegend=False,
+                ))
+
+            # ── Nodes grouped by community / topic ──────────────────────────
+            top15_set = set(net_nodes.nlargest(15, 'review_count')['neighborhood'])
+            for comm_id in sorted(net_nodes['community'].unique()):
+                grp = net_nodes[net_nodes['community'] == comm_id]
+                color = grp['comm_color'].iloc[0]
+                topic_name = grp['dominant_topic_label'].value_counts().index[0]
+
+                hero_grp    = grp[grp['is_hero'] == True]
+                regular_grp = grp[grp['is_hero'] == False]
+
+                for subset, is_hero in [(regular_grp, False), (hero_grp, True)]:
+                    if subset.empty:
+                        continue
+                    labels = subset['neighborhood'].apply(
+                        lambda n: n if (is_hero or n in top15_set) else ''
+                    )
+                    fig_net.add_trace(go.Scatter(
+                        x=subset['x'], y=subset['y'],
+                        mode='markers+text',
+                        name=topic_name if not is_hero else '',
+                        showlegend=not is_hero,
+                        legendgroup=f'comm_{comm_id}',
+                        marker=dict(
+                            size=subset['viz_size'],
+                            color=color,
+                            opacity=0.93 if is_hero else 0.80,
+                            line=dict(
+                                width=2.5 if is_hero else 0.5,
+                                color='white' if is_hero else 'rgba(255,255,255,0.12)',
+                            ),
+                        ),
+                        text=labels,
+                        textposition='top center',
+                        textfont=dict(
+                            size=9 if is_hero else 7,
+                            color='white' if is_hero else 'rgba(255,255,255,0.72)',
+                        ),
+                        customdata=subset[['neighborhood','borough','dominant_topic_label','review_count']].values,
+                        hovertemplate=(
+                            '<b>%{customdata[0]}</b><br>'
+                            '%{customdata[1]}<br>'
+                            '<span style="color:#c084fc">%{customdata[2]}</span><br>'
+                            'Reviews: %{customdata[3]:,}<extra></extra>'
+                        ),
+                    ))
+
+            fig_net.update_layout(
+                paper_bgcolor='#0a0d14', plot_bgcolor='#0a0d14',
+                font=dict(color='#94a3b8', family='Inter, Arial'),
+                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                height=700,
+                legend=dict(
+                    bgcolor='#141824', bordercolor='#1e2535', borderwidth=1,
+                    font=dict(size=10), title=dict(text='Dominant Topic', font=dict(color='#c084fc', size=10)),
+                    itemsizing='constant',
+                ),
+                margin=dict(l=10, r=10, t=20, b=20),
+            )
+            st.plotly_chart(fig_net, use_container_width=True)
+
+        except Exception as e:
+            st.error(f"Network data not found. Run the network cells in notebook 02 first. ({e})")
 
     st.divider()
 
