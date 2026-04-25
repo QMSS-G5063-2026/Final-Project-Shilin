@@ -144,9 +144,6 @@ def load_topics():
     with open(os.path.join(OUTPUT_DIR, 'topic_keywords.json')) as f:
         return json.load(f)
 
-def kepler_iframe(filename, height=610):
-    """Embed a Kepler.gl HTML file via Streamlit static serving."""
-    st.components.v1.iframe(f"app/static/{filename}", height=height, scrolling=False)
 
 # ── Load everything ───────────────────────────────────────────────────────────
 try:
@@ -400,27 +397,79 @@ with tab3:
     </p>""", unsafe_allow_html=True)
 
     map_tab1, map_tab2 = st.tabs([
-        "🔵  Review Density — H3 Hex Grid",
+        "🔵  Review Density",
         "🎨  Dominant Topic per Neighborhood",
     ])
+
+    MAP_LAYOUT = dict(
+        paper_bgcolor='#0a0d14',
+        margin=dict(l=0, r=0, t=0, b=0),
+        legend=dict(bgcolor='rgba(20,24,36,0.85)', bordercolor='#1e2535',
+                    borderwidth=1, font=dict(size=11, color='#cbd5e1')),
+    )
 
     with map_tab1:
         st.markdown('<p class="map-label">Airbnb Review Density Across NYC</p>', unsafe_allow_html=True)
         st.markdown("""<p class="map-desc">
-        Each hexagon represents an ~65 m cell of the Uber H3 grid (resolution 10).
-        Color intensity — dark teal to bright cyan — encodes review concentration.
-        Brighter cells indicate denser Airbnb activity and higher tourist foot traffic.
+        Each circle represents a neighborhood, sized and colored by total review volume.
+        Brighter cyan circles indicate denser Airbnb activity and higher tourist foot traffic.
+        Hover over a circle to see neighborhood details.
         </p>""", unsafe_allow_html=True)
-        kepler_iframe('kepler_map.html')
+
+        fig_density = px.scatter_map(
+            neigh_df,
+            lat='lat', lon='lon',
+            size='review_count',
+            color='review_count',
+            hover_name='neighborhood',
+            hover_data={'borough': True, 'review_count': True, 'lat': False, 'lon': False},
+            color_continuous_scale=[[0,'#0a2540'],[0.3,'#0e7490'],[0.6,'#22b5a0'],[1,'#67e8d0']],
+            size_max=45,
+            zoom=10,
+            center={"lat": 40.73, "lon": -73.98},
+            map_style='carto-darkmatter',
+            height=580,
+            labels={'review_count': 'Reviews', 'borough': 'Borough'},
+        )
+        fig_density.update_layout(**MAP_LAYOUT, coloraxis_showscale=False)
+        st.plotly_chart(fig_density, use_container_width=True)
 
     with map_tab2:
         st.markdown('<p class="map-label">Dominant Topic per Neighborhood</p>', unsafe_allow_html=True)
         st.markdown("""<p class="map-desc">
         Each circle is a neighborhood centroid. <strong>Size</strong> = total review volume;
-        <strong>color</strong> = distinctive topic (Plasma gradient, topic IDs 0–9).
-        Hover to see neighborhood name, topic label, review count, and top keywords.
+        <strong>color</strong> = distinctive topic that most characterizes that neighborhood
+        relative to the city average. Hover to see neighborhood name, topic, and top keywords.
         </p>""", unsafe_allow_html=True)
-        kepler_iframe('kepler_topic_map.html')
+
+        fig_topics = px.scatter_map(
+            neigh_df,
+            lat='lat', lon='lon',
+            color='dominant_topic_label',
+            size='review_count',
+            hover_name='neighborhood',
+            hover_data={
+                'borough': True,
+                'dominant_topic_label': True,
+                'review_count': True,
+                'top_keywords': True,
+                'lat': False, 'lon': False,
+            },
+            color_discrete_map=TOPIC_COLORS,
+            size_max=45,
+            zoom=10,
+            center={"lat": 40.73, "lon": -73.98},
+            map_style='carto-darkmatter',
+            height=580,
+            labels={
+                'dominant_topic_label': 'Topic',
+                'review_count': 'Reviews',
+                'borough': 'Borough',
+                'top_keywords': 'Keywords',
+            },
+        )
+        fig_topics.update_layout(**MAP_LAYOUT)
+        st.plotly_chart(fig_topics, use_container_width=True)
 
     st.divider()
 
