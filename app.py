@@ -34,7 +34,7 @@ st.markdown("""
     border-bottom: 1px solid #1e2535;
   }
   .site-title {
-    color: #c084fc; font-size: 1.5rem; font-weight: 700;
+    color: #c084fc; font-size: 2.625rem; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase; margin: 0;
   }
   .site-subtitle { color: #64748b; font-size: 0.9rem; margin: 0.3rem 0 1.2rem 0; }
@@ -60,7 +60,7 @@ st.markdown("""
     background: #141824; border: 1px solid #1e2535; border-radius: 12px;
     padding: 1.2rem 1.5rem; margin-bottom: 0.75rem;
   }
-  .kpi-value { font-size: 3rem; font-weight: 700; color: #c084fc; margin: 0; line-height: 1; }
+  .kpi-value { font-size: 5rem; font-weight: 700; color: #c084fc; margin: 0; line-height: 1; }
   .kpi-label { font-size: 0.8rem; color: #64748b; margin-top: 0.4rem;
     text-transform: uppercase; letter-spacing: 0.08em; }
 
@@ -75,7 +75,7 @@ st.markdown("""
   .insight-card strong { color: #e2e8f0; display: block; margin-bottom: 0.3rem; font-size: 0.87rem; }
 
   /* Section headings */
-  .section-title { font-size: 1.7rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.3rem; }
+  .section-title { font-size: 3.375rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.3rem; }
   .section-sub { font-size: 0.88rem; color: #94a3b8; margin-bottom: 1.4rem; line-height: 1.65; }
 
   /* Map labels */
