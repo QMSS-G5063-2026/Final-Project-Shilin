@@ -144,10 +144,9 @@ def load_topics():
     with open(os.path.join(OUTPUT_DIR, 'topic_keywords.json')) as f:
         return json.load(f)
 
-@st.cache_data
-def load_kepler(filename):
-    with open(os.path.join(OUTPUT_DIR, filename), 'r', encoding='utf-8') as f:
-        return f.read()
+def kepler_iframe(filename, height=610):
+    """Embed a Kepler.gl HTML file via Streamlit static serving."""
+    st.components.v1.iframe(f"app/static/{filename}", height=height, scrolling=False)
 
 # ── Load everything ───────────────────────────────────────────────────────────
 try:
@@ -412,10 +411,7 @@ with tab3:
         Color intensity — dark teal to bright cyan — encodes review concentration.
         Brighter cells indicate denser Airbnb activity and higher tourist foot traffic.
         </p>""", unsafe_allow_html=True)
-        try:
-            st.components.v1.html(load_kepler('kepler_map.html'), height=610, scrolling=False)
-        except Exception as e:
-            st.error(f"Map load error: {e}")
+        kepler_iframe('kepler_map.html')
 
     with map_tab2:
         st.markdown('<p class="map-label">Dominant Topic per Neighborhood</p>', unsafe_allow_html=True)
@@ -424,10 +420,7 @@ with tab3:
         <strong>color</strong> = distinctive topic (Plasma gradient, topic IDs 0–9).
         Hover to see neighborhood name, topic label, review count, and top keywords.
         </p>""", unsafe_allow_html=True)
-        try:
-            st.components.v1.html(load_kepler('kepler_topic_map.html'), height=610, scrolling=False)
-        except Exception as e:
-            st.error(f"Map load error: {e}")
+        kepler_iframe('kepler_topic_map.html')
 
     st.divider()
 
